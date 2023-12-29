@@ -13,32 +13,35 @@
         android:layout_marginTop="235dp"
         android:layout_marginBottom="61dp"
         android:ems="10"
+        android:gravity="center|center_horizontal|center_vertical"
         android:hint="Valor em Euros"
         android:inputType="text"
+        android:textAlignment="center"
         app:layout_constraintBottom_toTopOf="@+id/button_converter"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/text_dollar"
-        android:layout_width="126dp"
-        android:layout_height="0dp"
-        android:layout_marginBottom="224dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button_converter" />
-
     <Button
         android:id="@+id/button_converter"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="82dp"
+        android:layout_marginTop="40dp"
         android:text="Converter"
-        app:layout_constraintBottom_toTopOf="@+id/text_dollar"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/edit_euro"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="@+id/edit_euro"
         app:layout_constraintTop_toBottomOf="@+id/edit_euro" />
+
+    <TextView
+        android:id="@+id/text_dollar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="26dp"
+        android:layout_marginTop="77dp"
+        android:text="TextView"
+        app:layout_constraintEnd_toEndOf="@+id/button_converter"
+        app:layout_constraintStart_toStartOf="@+id/button_converter"
+        app:layout_constraintTop_toBottomOf="@+id/button_converter" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
