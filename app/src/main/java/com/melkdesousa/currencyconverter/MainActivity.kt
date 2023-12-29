@@ -12,14 +12,26 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        binding.buttonConvert.setOnClickListener {
-            val euros = binding.editEuros.text.toString().trim()
+        binding.buttonConvertToDollar.setOnClickListener {
+            calcTax(0.8, "US$ %.2f")
+        }
 
-            if (euros.isNotEmpty()) {
-                val dollars = euros.toDouble() * 0.8
+        binding.buttonConvertToReal.setOnClickListener {
+            calcTax(5.0, "R$ %.2f")
+        }
 
-                binding.textDollars.text = String.format("US$ %.2f", dollars)
-            }
+        binding.buttonConvertToPeso.setOnClickListener {
+            calcTax(10.2, "$ %.2f")
+        }
+    }
+
+    private fun calcTax(tax: Double, format: String) {
+        val value = binding.editEuros.text.toString().trim()
+
+        if (value.isNotEmpty()) {
+            val result = value.toDouble() * tax
+
+            binding.textConvertedValue.text = String.format(format, result)
         }
     }
 }

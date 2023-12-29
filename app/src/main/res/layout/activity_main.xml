@@ -13,18 +13,38 @@
         android:layout_height="wrap_content"
         android:layout_margin="20dp"
         android:gravity="center"
-        android:inputType="number|numberDecimal|numberSigned"
-        android:hint="Insira o valor em Euros" />
+        android:hint="Insira o valor em Euros"
+        android:inputType="number|numberDecimal|numberSigned" />
 
-    <Button
-        android:id="@+id/button_convert"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="50dp"
-        android:text="Converter" />
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/button_convert_to_dollar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Dolar" />
+
+        <Button
+            android:id="@+id/button_convert_to_real"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="5dp"
+            android:text="Real" />
+
+        <Button
+            android:id="@+id/button_convert_to_peso"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Peso" />
+
+    </LinearLayout>
 
     <TextView
-        android:id="@+id/text_dollars"
+        android:id="@+id/text_converted_value"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:gravity="center"
