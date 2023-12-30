@@ -23,6 +23,10 @@ class MainActivity : AppCompatActivity() {
 
             if (nickname == "user" && password == "pass") {
                 Toast.makeText(applicationContext, "Login válido!", Toast.LENGTH_LONG).show()
+
+                editNickname.setText("")
+                editPassword.setText("")
+
                 return@setOnClickListener
             }
 
